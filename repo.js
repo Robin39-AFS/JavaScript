@@ -27,11 +27,13 @@
 //     console.log(x);
 // }
 
-var a = 10;
+// var a = 10;
 
-function b(){
-    var x = 20;
-}
+// function b(){
+//     var x = 20;
+// }
 
-// console.log(b().x);
-console.log(window.a);
+// // console.log(b().x);
+// console.log(window.a);
+
+
