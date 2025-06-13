@@ -5,7 +5,7 @@
 // console.log(a)
 // var b = 100;
 
-// we see when declare a as let it take another memory instead of global
+// we see when declare a as let it takes another memory instead of global
 // Temporal dead is the time when this let variable was hoisted and till it is initialized some value. that time between that is known as temporal dead zone. 
 
 
