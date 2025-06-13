@@ -64,3 +64,5 @@ console.log(radius.calculate(area));
 // here it is our own map we built. 
 
 // Here we move to prototype and prototypal inheritance in javascript
+
+// prototype is like what we use in array object and function and we can see array.__Proto__ and other all and we can do prototype chaining. we can make our own prototype just like upper calculate. and we can inheritance object to other object and it's call prototypal inheritance. and many more we have to watch more about it. 
