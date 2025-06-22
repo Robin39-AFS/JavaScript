@@ -1,4 +1,4 @@
-/*  1. What a closire in javascript is? 
+/*  1. What a closure in javascript is? 
     So a function along with a reference to its outer lexical environment is called a closure.
     In other word you can say that closure is a combination of a function and its lexical scope bundle together forms a closure.
     
