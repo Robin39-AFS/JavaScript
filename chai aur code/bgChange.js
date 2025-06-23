@@ -17,17 +17,17 @@ document.getElementById("Start").onclick = function () {
 };
 
 document.getElementById("Stop").onclick = function () {
-//   document.body.style.backgroundColor = "white";
+  //   document.body.style.backgroundColor = "white";
   clearInterval(intervalId); // Clear the interval to stop changing the background color
- 
+
   console.log("Background color reset to white and interval cleared.");
 };
 
 // 2nd Project Pres the key and see the key code and key name
 
-const insert = document.getElementById('insert');
-document.addEventListener('keydown', (event) =>{
-  insert.innerHTML =`
+const insert = document.getElementById("insert");
+document.addEventListener("keydown", (event) => {
+  insert.innerHTML = `
   <div>
   <table>
     <tr>
@@ -42,5 +42,28 @@ document.addEventListener('keydown', (event) =>{
     </tr>
   </table>
   </div>
-  `
+  `;
 });
+
+// 3rd Project - Practice XMLHttpRequest
+document.getElementById("fetch-user").onclick = function () {
+  const xhr = new XMLHttpRequest();
+  const url = "https://api.github.com/users/Robin39-AFS"; // URL to fetch data from
+  xhr.open("GET", url);
+
+  // for tracking the request state
+  xhr.onreadystatechange = () => {
+    // check the state of the request
+    console.log("Ready state: " + xhr.readyState);
+    if (xhr.readyState === 4) {
+      const data = JSON.parse(xhr.responseText); // Get the response text
+      const userInfo = document.getElementById("user-info");
+        userInfo.innerHTML = `
+            <h2>${data.name}</h2>
+            <p>Followers: ${data.followers}</p>
+        `;
+      console.log(data.followers);
+    }
+  };
+  xhr.send();
+};
