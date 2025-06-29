@@ -138,7 +138,7 @@ fetch("https://dummyjson.com/users")
     console.log("Data fetched successfully");
     // return response.json(); // Parse the response as JSON
     const data = await response.json(); // Parse the response as JSON
-    console.log(data.users[2].id); // Log the fetched data
+    console.log(data.users[0].id); // Log the fetched data
 })
 // .then((data) => {
 //     console.log(data.users[2].id); // Access the users array from the fetched data
@@ -150,3 +150,7 @@ fetch("https://dummyjson.com/users")
 .finally(() =>{
     console.log("Fetch operation completed");
 });
+
+// Fun fact when you get error 404 or 200 is it recevie in response or reject? it will be in response not reject.
+// because the fetch API only rejects the promise on network errors, not on HTTP errors like 404 or 500
+// So we need to check the response status code to handle HTTP errors
